@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.0.final using JasperReports Library version 6.3.0  -->
+<!-- 2016-08-24T15:26:23 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ComapnyInformation" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="79212e05-610e-4ce1-8f2e-580dfd2c240a">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="GrosaryBillingSystem"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select * from  groarybillingsystem.companyinfo]]>
+	</queryString>
+	<field name="Srno" class="java.lang.Integer"/>
+	<field name="Name" class="java.lang.String"/>
+	<field name="Addresss" class="java.lang.String"/>
+	<field name="MobileNo" class="java.lang.String"/>
+	<field name="VATTANNO" class="java.lang.String"/>
+	<field name="CompanyLogo" class="java.lang.Object"/>
+	<field name="EmailId" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="1" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="80" splitType="Stretch">
+			<textField>
+				<reportElement x="-20" y="-20" width="595" height="30" uuid="037ab10f-dfb1-4668-a072-3cbc240371a0"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="23" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-3" y="10" width="560" height="20" uuid="a8ddfac9-109b-4c2f-82fb-61c942143020"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Addresss}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="30" width="200" height="20" uuid="e64ed45f-505d-42b9-a24a-99f75d2f86ad"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MobileNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="30" width="244" height="20" uuid="b49c1eb5-1d7f-4652-a939-4f1b6507d220"/>
+				<textElement verticalAlignment="Top">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EmailId}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="1" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
